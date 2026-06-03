@@ -1,0 +1,10 @@
+# Ignore everything inside any .terraform folder
+**/.terraform/
+*.exe
+
+# Ignore all state files anywhere in the project
+**/*.tfstate
+**/*.tfstate.*
+
+# Ignore crash logs
+*.log
