@@ -7,3 +7,6 @@ variable "cidr_block" {
 variable "aws_subnet" {
   default = ""
 }
+variable "aws_subnet2" {
+  default = ""
+}

@@ -5,3 +5,7 @@ resource "aws_subnet" "name" {
     vpc_id = var.vpc_id
     cidr_block = var.aws_subnet
 }
+resource "aws_subnet" "subnet2" {
+  vpc_id = var.vpc_id
+  cidr_block = var.aws_subnet2
+}
