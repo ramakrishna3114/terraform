@@ -8,3 +8,7 @@
 
 # Ignore crash logs
 *.log
+
+# Ignore local variable definitions 
+terraform.tfvars
+*.auto.tfvars
