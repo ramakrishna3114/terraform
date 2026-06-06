@@ -3,10 +3,12 @@ cidr_block = "10.0.0.0/16"
 }
 resource "aws_subnet" "name" {
 vpc_id = aws_vpc.name.id 
+availability_zone = "us-east-1a"
 cidr_block = "10.0.1.0/24"
 }
 resource "aws_subnet" "subnet2" {
 vpc_id = aws_vpc.name.id
+availability_zone = "us-east-1a"
 cidr_block = "10.0.2.0/24"
 }   
 resource "aws_internet_gateway" "gw" {
@@ -37,7 +39,8 @@ resource "aws_route_table_association" "b" {
 }
 resource "aws_nat_gateway" "name" {
   allocation_id = aws_eip.nat.id
-    subnet_id = aws_subnet.name.id
+  subnet_id = aws_subnet.name.id
+    region = var.region
 }
 resource "aws_route" "public" {
  route_table_id = aws_route_table.public_rt.id
@@ -87,4 +90,5 @@ resource "aws_db_instance" "name" {
   db_name = var.db_name
   username = "admin"
   password = "password123"
+  skip_final_snapshot = true  
 }

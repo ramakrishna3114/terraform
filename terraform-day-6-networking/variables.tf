@@ -7,3 +7,6 @@ variable "instance_type" {
 variable "db_name" {
   default = ""
 }
+variable "region" {
+  default = ""
+}
