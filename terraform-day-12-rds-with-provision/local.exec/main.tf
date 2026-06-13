@@ -9,7 +9,7 @@ resource "aws_db_instance" "mysql_rds" {
   engine                  = "mysql"
   instance_class          = "db.t3.micro"
   username                = "admin"
-  password                = "Password123!"
+  password                = "sweety@3114!"
   db_name                 = "dev"
   allocated_storage       = 20
   skip_final_snapshot     = true
