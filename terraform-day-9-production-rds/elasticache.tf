@@ -6,7 +6,7 @@ resource "random_password" "redis_auth_token" {
 
 resource "aws_secretsmanager_secret" "redis_auth_token" {
   name                    = "${local.name_prefix}/redis/auth-token"
-  kms_key_id              = aws_kms_key.data.arn
+  kms_key_id              = ba7f5e31-cf14-4ea3-a8f6-1558e29b8068
   recovery_window_in_days = 30
 
   tags = {
@@ -75,7 +75,7 @@ resource "aws_elasticache_replication_group" "redis" {
 resource "aws_cloudwatch_log_group" "redis_engine" {
   name              = "/aws/elasticache/${local.name_prefix}/redis-engine"
   retention_in_days = 30
-  kms_key_id        = aws_kms_key.data.arn
+  kms_key_id        =   ba7f5e31-cf14-4ea3-a8f6-1558e29b8068
 
   tags = {
     Name = "${local.name_prefix}-redis-engine-logs"

@@ -70,7 +70,8 @@ resource "aws_db_instance" "primary" {
   monitoring_interval             = 60
   monitoring_role_arn             = aws_iam_role.rds_monitoring.arn
   performance_insights_enabled    = true
-  performance_insights_kms_key_id = aws_kms_key.data.arn
+  performance_insights_kms_key_id = ba7f5e31-cf14-4ea3-a8f6-1558e29b8068
+
 
   auto_minor_version_upgrade = true
   apply_immediately          = false
